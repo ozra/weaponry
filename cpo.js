@@ -5,8 +5,8 @@
 *
 * What?: A deep copy, with optional object reference recursion awareness as
 *        full-through or fallback in suspected recursion-cases.
-*        Per 19 June 2014 it kicks the JSON.decode(JSON.stringify()) method
-*        with added object integrity.
+*        Per 19 June 2014 it kicks the speed reference method
+*        JSON.parse(JSON.stringify()) ass - with added object integrity.
 *
 *        Is defined with AMD package formalia.
 *
