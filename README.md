@@ -24,13 +24,21 @@ cpo (copy object) is a deep-cloner for objects.
 
 Usage: 
 
-cloned-obj = cpo source-obj         # no-belts version - fastest
-cloned-obj = cpo source-obj, true   # be reference recursion aware
-(slower) 
-cloned-obj = cpo source-obj, 1000   # fast with belts, if we dive
-through 1000 objs (per example), we will suspect recursion, abort and resort to the
-recurse-aware function. Fast, until a recursive obj is hit, then there's
-the penalty of first trying without the check..
+Livescript:
+```LiveScript
+  cloned-obj = cpo source-obj         # no-belts version - fastest
+  cloned-obj = cpo source-obj, true   # be reference recursion aware (slower) 
+  cloned-obj = cpo source-obj, 1000   # fast with belts, if we dive through 1000 objs (per example), suspect recursion, abort and resort to the recurse-aware function.
+```
+
+The last one is fast, until a recursive obj is hit, in that case there's the penalty of first trying without the check.. Good to keep your app from crashing from an unexpected recursive object at a small CPU cost.
+
+Javascript:
+```JavaScript
+  clonedObj = cpo(sourceObj);         # no-belts version - fastest
+  clonedObj = cpo(sourceObj, true);   # be reference recursion aware (slower) 
+  clonedObj = cpo(sourceObj, 1000);   # fast with belts 
+```
 
 Check out the source, for more intell.
 
