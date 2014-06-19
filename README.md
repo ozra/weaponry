@@ -17,6 +17,8 @@ cpo (copy object) is a deep-cloner for objects.
   JSON.parse(JSON.stringify()) - more importantly: with added object 
   integrity and ability to do object reference recursion cloning.
 
+  see: http://jsperf.com/deep-cloning-of-objects/10
+
 - A deep copy, with optional object reference recursion awareness as
   full-through or fallback in suspected recursion-cases.
 
