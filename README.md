@@ -35,9 +35,9 @@ The last one is fast, until a recursive obj is hit, in that case there's the pen
 
 Javascript:
 ```JavaScript
-  clonedObj = cpo(sourceObj);         # no-belts version - fastest
-  clonedObj = cpo(sourceObj, true);   # be reference recursion aware (slower) 
-  clonedObj = cpo(sourceObj, 1000);   # fast with belts 
+  clonedObj = cpo(sourceObj);         // no-belts version - fastest
+  clonedObj = cpo(sourceObj, true);   // be reference recursion aware (slower) 
+  clonedObj = cpo(sourceObj, 1000);   // fast with belts 
 ```
 
 Check out the source, for more intell.
